@@ -6,13 +6,13 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       image: testimonial1,
-      name: "Sarah Chen",
-      role: "Medical Student, Class of 2025",
+      name: "Marcus Rodriguez",
+      role: "Medical Student, Class of 2027",
       content: "The Pledge Consultants helped me navigate the complex application process with personalized guidance that made all the difference. Their affordable approach meant I could get expert help without breaking the bank."
     },
     {
       image: testimonial2,
-      name: "Marcus Rodriguez",
+      name: "Sarah Chen",
       role: "Pre-med Student",
       content: "Having mentors who recently went through the same process was invaluable. They understood the current landscape and provided insights that traditional consultants simply couldn't offer."
     }
@@ -55,5 +55,6 @@ const TestimonialsSection = () => {
     </section>
   );
 };
+
 
 export default TestimonialsSection;
