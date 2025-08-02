@@ -5,7 +5,7 @@ const StatsSection = () => {
   const stats = [
     {
       icon: Users,
-      number: "500+",
+      number: "50+",
       label: "Students Guided",
       description: "Future physicians we've helped"
     },
@@ -17,13 +17,13 @@ const StatsSection = () => {
     },
     {
       icon: BookOpen,
-      number: "50+",
+      number: "10+",
       label: "Medical Schools",
       description: "Where our students got accepted"
     },
     {
       icon: Award,
-      number: "3+",
+      number: "15+",
       label: "Years Experience",
       description: "Collective mentoring expertise"
     }
@@ -70,5 +70,6 @@ const StatsSection = () => {
     </section>
   );
 };
+
 
 export default StatsSection;
