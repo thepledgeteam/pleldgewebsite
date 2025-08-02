@@ -5,7 +5,7 @@ const PricingSection = () => {
     {
       icon: FileText,
       service: "Essay Review",
-      price: "$100 per essay",
+      price: "$50 per hour of review",
       details: "Comprehensive feedback on structure, content, and admissions impact from experienced reviewers"
     },
     {
@@ -17,14 +17,14 @@ const PricingSection = () => {
     {
       icon: MessageSquare,
       service: "Interview Prep",
-      price: "$100 per session",
+      price: "$50 per session",
       details: "Mock interviews with tailored feedback from recent successful applicants"
     }
   ];
 
   const valuePoints = [
-    "Expertise You Trust: Every advisor is a current medical resident who aced their own application cycle.",
-    "Quality Over Quantity: We accept only 50 advisees per cycle to ensure unmatched attention.",
+    "Expertise You Trust: Advisors are current resident physicians or medical students who aced their own application cycle.",
+    "Quality Over Quantity: We accept a limited number of advisees (~50) per cycle to ensure unmatched attention.",
     "Ethical Pricing: Fees reflect the true cost of strategic guidance, honoring advisors' time and your unique needs."
   ];
 
@@ -119,5 +119,6 @@ const PricingSection = () => {
     </section>
   );
 };
+
 
 export default PricingSection;
