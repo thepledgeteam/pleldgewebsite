@@ -117,10 +117,10 @@ const ContactSection = () => {
             <p className="text-muted-foreground">
               Or email us directly at{" "}
               <a 
-                href="mailto:thepledge68@gmail.com" 
+                href="mailto:contact@pledgeconsultants.com" 
                 className="text-primary hover:underline"
               >
-                contact@pledgeconsultants.org
+                contact@pledgeconsultants.com
               </a>
             </p>
           </div>
@@ -132,3 +132,4 @@ const ContactSection = () => {
 
 
 export default ContactSection;
+
