@@ -62,7 +62,7 @@ const ContactSection = () => {
               Feel free to contact us with any questions.
             </p>
           </div>
-
+{/*
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <Label htmlFor="name" className="text-sm font-medium text-foreground">
@@ -112,7 +112,7 @@ const ContactSection = () => {
               Send Message
             </Button>
           </form>
-
+*/}
           <div className="text-center mt-8">
             <p className="text-muted-foreground">
               Or email us directly at{" "}
@@ -132,4 +132,5 @@ const ContactSection = () => {
 
 
 export default ContactSection;
+
 
