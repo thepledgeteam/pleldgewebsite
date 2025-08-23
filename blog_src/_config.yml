@@ -1,0 +1,3 @@
+title: "Pledge Blog"
+baseurl: "/blog"
+permalink: /:year/:month/:day/:slug/
