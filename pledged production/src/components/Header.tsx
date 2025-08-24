@@ -11,6 +11,7 @@ const Header = () => {
     { label: "Pricing", href: "#pricing" },
     { label: "Vision", href: "#vision" },
     { label: "Contact", href: "#contact" },
+    { label: "Blog", href: "/blog", isExternal: true },
   ];
 
   return (
@@ -34,6 +35,7 @@ const Header = () => {
                 key={item.label}
                 href={item.href}
                 className="text-muted-foreground hover:text-primary transition-smooth"
+                {...(item.isExternal ? { target: "_self" } : {})}
               >
                 {item.label}
               </a>
@@ -59,6 +61,7 @@ const Header = () => {
                   href={item.href}
                   className="text-muted-foreground hover:text-primary transition-smooth"
                   onClick={() => setIsMenuOpen(false)}
+                  {...(item.isExternal ? { target: "_self" } : {})}
                 >
                   {item.label}
                 </a>
