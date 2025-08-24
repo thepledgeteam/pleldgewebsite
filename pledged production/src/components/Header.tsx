@@ -11,6 +11,7 @@ const Header = () => {
     { label: "Pricing", href: "#pricing" },
     { label: "Vision", href: "#vision" },
     { label: "Contact", href: "#contact" },
+    { label: "Blog", href: "/blog/" },
   ];
 
   return (
@@ -70,5 +71,6 @@ const Header = () => {
     </header>
   );
 };
+
 
 export default Header;
