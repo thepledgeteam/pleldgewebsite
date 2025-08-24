@@ -1,0 +1,54 @@
+name: Build and Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Install Node.js for React build
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies and build React app
+        run: |
+          npm ci
+          npm run build
+
+      # Install Ruby & Jekyll for blog build
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+
+      - name: Install Jekyll and build blog
+        run: |
+          gem install bundler
+          bundle install
+          bundle exec jekyll build --source blog_src --destination blog_build
+
+      # Combine React and Blog into one dist folder
+      - name: Combine React and Blog builds
+        run: |
+          mkdir dist
+          mv dist/ temp_dist
+          mv temp_dist/* dist/
+          mv blog_build dist/blog
+
+      # Deploy to Cloudflare Pages
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: your-cloudflare-project
+          directory: dist
