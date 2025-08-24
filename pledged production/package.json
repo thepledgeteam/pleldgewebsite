@@ -81,3 +81,12 @@
     "vite": "^5.4.1"
   }
 }
+
+{
+  "scripts": {
+    "build:blog": "cd 'pledged production' && bundle install && bundle exec jekyll build --source blog_src --destination ../dist-blog",
+    "build:app": "vite build",
+    "copy:blog": "cp -r dist-blog/. dist/blog/",
+    "build": "npm run build:blog && npm run build:app && npm run copy:blog"
+  }
+}
