@@ -56,6 +56,11 @@
             font-weight: bold;
         }
         
+        .logo a {
+            color: white;
+            text-decoration: none;
+        }
+        
         nav ul {
             display: flex;
             list-style: none;
@@ -92,29 +97,54 @@
         .blog-header h1 {
             color: var(--primary);
             margin-bottom: 0.5rem;
+            font-size: 2.5rem;
         }
         
         .blog-date {
             color: var(--gray);
             font-style: italic;
+            font-size: 1.1rem;
         }
         
         .blog-content {
             font-size: 1.1rem;
+            line-height: 1.8;
         }
         
         .blog-content h2 {
             color: var(--primary);
+            margin: 2rem 0 1rem 0;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .blog-content h3 {
+            color: var(--primary-dark);
             margin: 1.5rem 0 0.5rem 0;
+            font-size: 1.4rem;
         }
         
         .blog-content p {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
         }
         
-        .blog-content ol {
+        .blog-content ul, .blog-content ol {
             margin-left: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background-color: var(--light-gray);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
         }
         
         .back-link {
@@ -123,10 +153,16 @@
             color: var(--primary);
             text-decoration: none;
             font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary);
+            border-radius: var(--radius);
+            transition: all 0.3s;
         }
         
         .back-link:hover {
-            text-decoration: underline;
+            background-color: var(--primary);
+            color: white;
         }
         
         footer {
@@ -157,20 +193,32 @@
             .blog-container {
                 padding: 1rem;
             }
+            
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+            
+            .blog-content h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">Pledge Consultants</div>
+            <div class="logo">
+                <a href="/#home">Pledge Consultants</a>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/about">About</a></li>
+                    <li><a href="/#home">Home</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/#about">About Us</a></li>
+                    <li><a href="/#pricing">Pricing</a></li>
+                    <li><a href="/#vision">Vision</a></li>
+                    <li><a href="/#contact">Contact</a></li>
                     <li><a href="/blog">Blog</a></li>
-                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -187,20 +235,79 @@
             
             <h2>1. Don't Overlook the Academic Explanation Essay</h2>
             <p>If you've faced circumstances that impacted your academic performance, this is your chance to address them. But do so strategically:</p>
-            <p>Did you move to a new country at the start of undergrad and need time to adjust?</p>
-            <p>Did health challenges affect your grades during a particular term?</p>
+            <ul>
+                <li>Did you move to a new country at the start of undergrad and need time to adjust?</li>
+                <li>Did health challenges affect your grades during a particular term?</li>
+            </ul>
             <p>Use this section to provide context—not excuses. Be factual and concise, and explain what you learned or how you grew from the experience.</p>
             
             <h2>2. Understand the Four Clusters</h2>
             <p>The University of Toronto evaluates applicants across four non-academic domains (or "clusters"). While your BPE responses don't need to hit every cluster, it's helpful if they naturally reflect these qualities.</p>
-            <p>You can find the details on UofT's official website</p>
+            <p>You can find the details on UofT's official website but in short, these clusters focus on attributes like professionalism, advocacy, and resilience—qualities that make a strong future physician.</p>
             
-            <a href="/blog" class="back-link">&larr; Back to Blog</a>
+            <h2>3. The Purpose of the Brief Personal Essays</h2>
+            <p>The BPEs aren't just another writing exercise—they're an opportunity to showcase your values and alignment with UofT's mission. These essays are evaluated independently of all other application components, so a strong response can make a real impact.</p>
+            
+            <h2>4. Breaking Down the Two Prompts</h2>
+            <h3>Prompt 1: A Time You Received Memorable Feedback</h3>
+            <p>Describe a time when you received feedback that stands out in your memory. Why did it stand out from other feedback experiences? What did you do with the feedback and how did it influence your use of feedback, if at all?</p>
+            
+            <div class="highlight-box">
+                <p><strong>Here's how to approach it:</strong></p>
+                <ul>
+                    <li>Be sincere. Authenticity is key.</li>
+                    <li>Explain why this feedback stood out. Was it the first time you received critical feedback after a history of positive evaluations? Did it come from someone whose opinion mattered deeply?</li>
+                    <li>Share your emotions in the moment—what did you feel and why?</li>
+                    <li>Most importantly: What did you do with the feedback? Did you seek clarification? Revise your approach? Demonstrate a growth mindset?</li>
+                </ul>
+            </div>
+            
+            <p>Medical school is full of evaluations. UofT wants applicants who are receptive to feedback and committed to continuous improvement. Make sure your essay reflects this.</p>
+            
+            <h3>Prompt 2: A Meaningful Learning Experience Outside the Classroom</h3>
+            <p>Describe a meaningful learning experience that occurred outside of a formal educational context (e.g., community service, employment, or extracurricular setting). What concepts or skills did you find particularly challenging to learn? What resources did you use to assist this learning? How did this experience impact your approach to learning, if at all?</p>
+            
+            <div class="highlight-box">
+                <p><strong>This is your chance to show what matters most to you:</strong></p>
+                <ul>
+                    <li>Choose an example that reflects your values, such as community service, advocacy, or leadership.</li>
+                    <li>Great essays often highlight lessons learned in unexpected places—for example, a volunteer learning resilience from those they serve, or a leader learning humility from a team member.</li>
+                    <li>Explain the challenge, the strategies you used to overcome it, and the lasting impact on how you approach learning today.</li>
+                </ul>
+            </div>
+            
+            <h2>5. Make Your Essays Stand Out</h2>
+            <p>What separates a good essay from a great one? Reflection and storytelling.</p>
+            <ul>
+                <li>Go beyond describing what happened—focus on what you learned and why it matters.</li>
+                <li>Show growth, adaptability, and a genuine commitment to serving others.</li>
+                <li>Keep your tone authentic. Admissions committees can sense when an essay feels forced or overly polished.</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <p><strong>Final Tip:</strong> These essays aren't about perfection—they're about authenticity, resilience, and alignment with the values of the medical profession. Take time to reflect deeply on your experiences and write from a place of honesty.</p>
+            </div>
+            
+            <a href="/#home" class="back-link">&larr; Back to Home</a>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2025 Pledge Consultants. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Handle navigation from blog to main site with hash anchors
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click handlers for navigation links
+            document.querySelectorAll('a[href^="/#"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const hash = this.getAttribute('href').substring(1);
+                    window.location.href = '/' + hash;
+                });
+            });
+        });
+    </script>
 </body>
 </html>
