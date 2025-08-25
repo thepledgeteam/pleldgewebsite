@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Pledge Consultants</title>
+    <style>
+        :root {
+            --primary: #1a6bb3;
+            --primary-dark: #0d4d8e;
+            --secondary: #f8f9fa;
+            --text: #333;
+            --light: #fff;
+            --gray: #666;
+            --light-gray: #e9ecef;
+            --spacing: 1rem;
+            --radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--secondary);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--light);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 var(--radius) var(--radius);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .logo a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            color: var(--light);
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: 500;
+        }
+        
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+        
+        .blog-container {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-header h1 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+        
+        .blog-list {
+            margin-top: 2rem;
+        }
+        
+        .blog-preview {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .blog-preview:hover {
+            transform: translateY(-2px);
+        }
+        
+        .blog-preview h2 {
+            margin: 0 0 0.5rem 0;
+            color: #1a6bb3;
+        }
+        
+        .blog-preview h2 a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .post-date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .post-excerpt {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .read-more {
+            color: #1a6bb3;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 2px solid #1a6bb3;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .read-more:hover {
+            background-color: #1a6bb3;
+            color: white;
+        }
+        
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--light);
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: var(--radius) var(--radius) 0 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 1rem;
+            }
+            
+            .blog-container {
+                padding: 1rem;
+            }
+            
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="/#home">Pledge Consultants</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/#home">Home</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/#about">About Us</a></li>
+                    <li><a href="/#pricing">Pricing</a></li>
+                    <li><a href="/#vision">Vision</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1>Our Blog</h1>
+            <p>Insights, tips, and news from the world of medical education consulting</p>
+        </div>
+        
+        <div class="blog-list">
+            <article class="blog-preview">
+                <h2><a href="/blog/uoft-brief-personal-essay/">My 5-Point Approach to the UofT Brief Personal Essay</a></h2>
+                <div class="post-date">August 25, 2025 • 5 min read</div>
+                <p class="post-excerpt">Learn how to craft authentic, compelling responses for the University of Toronto's MD Program application. This guide covers strategic approaches to the Brief Personal Essays that can help your application stand out.</p>
+                <a href="/blog/uoft-brief-personal-essay/" class="read-more">Read Article →</a>
+            </article>
+            
+            <article class="blog-preview">
+                <h2><a href="/blog/medical-school-interview-tips/">10 Medical School Interview Tips for Success</a></h2>
+                <div class="post-date">September 15, 2025 • 8 min read</div>
+                <p class="post-excerpt">Essential strategies to excel in your medical school interviews and make a lasting positive impression on admissions committees. Learn how to prepare for common questions and present your best self.</p>
+                <a href="/blog/medical-school-interview-tips/" class="read-more">Read Article →</a>
+            </article>
+            
+            <!-- Add more blog previews here as you create new posts -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Pledge Consultants. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Handle navigation from blog to main site with hash anchors
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click handlers for navigation links
+            document.querySelectorAll('a[href^="/#"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const hash = this.getAttribute('href').substring(1);
+                    window.location.href = '/' + hash;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
