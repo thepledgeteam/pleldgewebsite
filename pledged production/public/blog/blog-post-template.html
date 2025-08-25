@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST_TITLE - Pledge Consultants</title>
+    <style>
+        :root {
+            --primary: #1a6bb3;
+            --primary-dark: #0d4d8e;
+            --secondary: #f8f9fa;
+            --text: #333;
+            --light: #fff;
+            --gray: #666;
+            --light-gray: #e9ecef;
+            --spacing: 1rem;
+            --radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--secondary);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--light);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 var(--radius) var(--radius);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .logo a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            color: var(--light);
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: 500;
+        }
+        
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+        
+        .blog-container {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-header h1 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+        
+        .blog-date {
+            color: var(--gray);
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        
+        .blog-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .blog-content h2 {
+            color: var(--primary);
+            margin: 2rem 0 1rem 0;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+        
+        .blog-content h3 {
+            color: var(--primary-dark);
+            margin: 1.5rem 0 0.5rem 0;
+            font-size: 1.4rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background-color: var(--light-gray);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary);
+            border-radius: var(--radius);
+            transition: all 0.3s;
+        }
+        
+        .back-link:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--light);
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: var(--radius) var(--radius) 0 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 1rem;
+            }
+            
+            .blog-container {
+                padding: 1rem;
+            }
+            
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+            
+            .blog-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="/#home">Pledge Consultants</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/#home">Home</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/#about">About Us</a></li>
+                    <li><a href="/#pricing">Pricing</a></li>
+                    <li><a href="/#vision">Vision</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1>POST_TITLE</h1>
+            <div class="blog-date">Published on: POST_DATE • X min read</div>
+        </div>
+        
+        <div class="blog-content">
+            <!-- Your blog content here -->
+            
+            <a href="/blog/" class="back-link">&larr; Back to All Posts</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Pledge Consultants. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Handle navigation from blog to main site with hash anchors
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click handlers for navigation links
+            document.querySelectorAll('a[href^="/#"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const hash = this.getAttribute('href').substring(1);
+                    window.location.href = '/' + hash;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
