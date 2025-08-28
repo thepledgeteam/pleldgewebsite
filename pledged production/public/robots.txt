@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap for crawler discovery
+Sitemap: https://www.pledgeconsultants.com/sitemap.xml
