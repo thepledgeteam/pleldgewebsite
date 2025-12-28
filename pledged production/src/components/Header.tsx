@@ -10,7 +10,7 @@ const Header = () => {
     { label: "Services", href: "#services" },
     { label: "Pricing", href: "#pricing" },
     { label: "Vision", href: "#vision" },
-    { label: "Advisors", href: "/advisors" }, // ✅ NEW
+    { label: "Advisors", href: "/advisors.html", isExternal: true }, // ✅ NEW
     { label: "Contact", href: "#contact" },
     { label: "Blog", href: "/blog", isExternal: true },
   ];
@@ -76,5 +76,6 @@ const Header = () => {
 };
 
 export default Header;
+
 
 
