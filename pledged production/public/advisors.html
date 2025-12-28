@@ -3,33 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Advisors | Pledge Consultants</title>
 
-    <!-- Use the same CSS as the blog for consistent styling -->
-    <link rel="stylesheet" href="/blog.css">
+    <!-- SEO -->
+    <title>Our Advisors | Pledge Consultants</title>
+    <meta name="description" content="Meet the team of medical advisors guiding students through the application process.">
 
     <style>
-        /* Additional styling specific to Advisors page */
+        :root {
+            --primary: #1a6bb3;
+            --primary-dark: #0d4d8e;
+            --secondary: #f8f9fa;
+            --text: #333;
+            --light: #fff;
+            --gray: #666;
+            --spacing: 1rem;
+            --radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--secondary);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--light);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 var(--radius) var(--radius);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        .logo { font-size: 1.8rem; font-weight: bold; }
+        .logo a { color: white; text-decoration: none; }
+
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 2rem; }
+        nav ul li a { color: var(--light); text-decoration: none; font-weight: 500; }
+
+        .blog-container {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .blog-header h1 { color: var(--primary); margin-bottom: 0.5rem; font-size: 2.5rem; }
+
         .advisor-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 1.5rem;
         }
 
         .advisor-card {
             background: white;
             padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
             text-align: center;
             transition: transform 0.2s;
-            border-left: 4px solid #1a6bb3;
         }
 
-        .advisor-card:hover {
-            transform: translateY(-2px);
-        }
+        .advisor-card:hover { transform: translateY(-2px); }
 
         .advisor-photo {
             width: 120px;
@@ -37,102 +96,89 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 1rem;
-            border: 3px solid #1a6bb3;
+            border: 3px solid var(--primary);
         }
 
-        .advisor-name {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #1a6bb3;
-        }
+        .advisor-name { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--primary); }
+        .advisor-info { font-size: 0.95rem; color: var(--gray); line-height: 1.4; }
 
-        .advisor-info {
-            font-size: 0.95rem;
-            color: #666;
-            line-height: 1.4;
+        .back-link { display: inline-block; margin-top: 2rem; color: var(--primary); text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-radius: var(--radius) var(--radius) 0 0;
         }
 
         @media (max-width: 768px) {
-            .advisor-grid {
-                grid-template-columns: 1fr;
-            }
+            .header-content { flex-direction: column; }
+            nav ul { margin-top: 1rem; }
+            .advisor-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <a href="/#home">Pledge Consultants</a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/#home">Home</a></li>
-                    <li><a href="/#services">Services</a></li>
-                    <li><a href="/#about">About Us</a></li>
-                    <li><a href="/#pricing">Pricing</a></li>
-                    <li><a href="/#vision">Vision</a></li>
-                    <li><a href="/#contact">Contact</a></li>
-                    <li><a href="/advisors.html">Advisors</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                </ul>
-            </nav>
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <a href="/#home">Pledge Consultants</a>
         </div>
-    </header>
+        <nav>
+            <ul>
+                <li><a href="/#home">Home</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#about">About Us</a></li>
+                <li><a href="/#pricing">Pricing</a></li>
+                <li><a href="/#vision">Vision</a></li>
+                <li><a href="/#contact">Contact</a></li>
+                <li><a href="/advisors.html">Advisors</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <main>
-        <article class="blog-container">
-            <div class="blog-header">
-                <h1>Our Advisors</h1>
-                <p>Meet the team guiding students through their medical journey.</p>
+<main class="blog-container">
+    <div class="blog-header">
+        <h1>Our Advisors</h1>
+        <p>Meet the team guiding students through their medical journey.</p>
+    </div>
+
+    <div class="advisor-grid">
+        <!-- Advisor 1 -->
+        <div class="advisor-card">
+            <img src="/assets/advisor1.jpg" alt="Dr. Jane Doe" class="advisor-photo">
+            <div class="advisor-name">Dr. Jane Doe</div>
+            <div class="advisor-info">
+                Undergrad: University of Toronto<br>
+                Medical School: Harvard Medical School<br>
+                Residency: Toronto General Hospital
             </div>
+        </div>
 
-            <div class="blog-content">
-                <div class="advisor-grid">
-                    <!-- Advisor 1 -->
-                    <div class="advisor-card">
-                        <img src="/assets/advisor1.jpg" alt="Dr. Jane Doe" class="advisor-photo">
-                        <div class="advisor-name">Dr. Jane Doe</div>
-                        <div class="advisor-info">
-                            Undergrad: University of Toronto<br>
-                            Medical School: Harvard Medical School<br>
-                            Residency: Toronto General Hospital
-                        </div>
-                    </div>
-
-                    <!-- Advisor 2 -->
-                    <div class="advisor-card">
-                        <img src="/assets/advisor2.jpg" alt="Dr. John Smith" class="advisor-photo">
-                        <div class="advisor-name">Dr. John Smith</div>
-                        <div class="advisor-info">
-                            Undergrad: McGill University<br>
-                            Medical School: Stanford University<br>
-                            Residency: Cleveland Clinic
-                        </div>
-                    </div>
-
-                    <!-- Advisor 3 -->
-                    <div class="advisor-card">
-                        <img src="/assets/advisor3.jpg" alt="Dr. Emily Chen" class="advisor-photo">
-                        <div class="advisor-name">Dr. Emily Chen</div>
-                        <div class="advisor-info">
-                            Undergrad: University of British Columbia<br>
-                            Medical School: Washington University in St. Louis<br>
-                            Residency: Mount Sinai Hospital
-                        </div>
-                    </div>
-
-                    <!-- Add more advisors here -->
-                </div>
-
-                <a href="/#home" class="back-link">&larr; Back to Home</a>
+        <!-- Advisor 2 -->
+        <div class="advisor-card">
+            <img src="/assets/advisor2.jpg" alt="Dr. John Smith" class="advisor-photo">
+            <div class="advisor-name">Dr. John Smith</div>
+            <div class="advisor-info">
+                Undergrad: McGill University<br>
+                Medical School: Stanford University<br>
+                Residency: Cleveland Clinic
             </div>
-        </article>
-    </main>
+        </div>
 
-    <footer>
-        <p>&copy; 2025 Pledge Consultants. All rights reserved.</p>
-    </footer>
+        <!-- Add more advisors here -->
+    </div>
+
+    <a href="/#home" class="back-link">&larr; Back to Home</a>
+</main>
+
+<footer>
+    <p>&copy; 2025 Pledge Consultants. All rights reserved.</p>
+</footer>
 </body>
 </html>
