@@ -3,115 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Advisors - Pledge Consultants</title>
-    <link rel="stylesheet" href="styles.css"> <!-- use your main CSS -->
+    <title>Our Advisors | Pledge Consultants</title>
+
+    <!-- Use the same CSS as the blog for consistent styling -->
+    <link rel="stylesheet" href="/blog.css">
+
     <style>
-        .advisors-container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        h1 {
-            text-align: center;
-            color: #1a6bb3;
-            margin-bottom: 2rem;
-        }
-
+        /* Additional styling specific to Advisors page */
         .advisor-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 2rem;
+            margin-top: 2rem;
         }
 
         .advisor-card {
             background: white;
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             text-align: center;
+            transition: transform 0.2s;
+            border-left: 4px solid #1a6bb3;
         }
 
-        .advisor-card img {
+        .advisor-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .advisor-photo {
             width: 120px;
             height: 120px;
-            object-fit: cover;
             border-radius: 50%;
+            object-fit: cover;
             margin-bottom: 1rem;
+            border: 3px solid #1a6bb3;
         }
 
-        .advisor-card h3 {
+        .advisor-name {
+            font-size: 1.25rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
             color: #1a6bb3;
         }
 
-        .advisor-card p {
-            margin: 0.25rem 0;
-            color: #666;
+        .advisor-info {
             font-size: 0.95rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .advisor-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-<header>
-    <div class="header-content">
-        <div class="logo">
-            <a href="/#home">Pledge Consultants</a>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="/#home">Pledge Consultants</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/#home">Home</a></li>
+                    <li><a href="/#services">Services</a></li>
+                    <li><a href="/#about">About Us</a></li>
+                    <li><a href="/#pricing">Pricing</a></li>
+                    <li><a href="/#vision">Vision</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                    <li><a href="/advisors.html">Advisors</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/#home">Home</a></li>
-                <li><a href="/#services">Services</a></li>
-                <li><a href="/#about">About Us</a></li>
-                <li><a href="/#pricing">Pricing</a></li>
-                <li><a href="/#vision">Vision</a></li>
-                <li><a href="/#contact">Contact</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/advisors.html">Advisors</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
-<main class="advisors-container">
-    <h1>Our Advisors</h1>
-    <div class="advisor-grid">
-        <div class="advisor-card">
-            <img src="assets/advisor1.jpg" alt="Dr. Jane Doe">
-            <h3>Dr. Jane Doe</h3>
-            <p>Undergrad: University of Toronto</p>
-            <p>Medical School: Harvard Medical School</p>
-            <p>Residency: Cleveland Clinic Lerner College of Medicine</p>
-        </div>
+    <main>
+        <article class="blog-container">
+            <div class="blog-header">
+                <h1>Our Advisors</h1>
+                <p>Meet the team guiding students through their medical journey.</p>
+            </div>
 
-        <div class="advisor-card">
-            <img src="assets/advisor2.jpg" alt="Dr. John Smith">
-            <h3>Dr. John Smith</h3>
-            <p>Undergrad: McGill University</p>
-            <p>Medical School: Stanford University</p>
-            <p>Residency: Washington University in St. Louis</p>
-        </div>
+            <div class="blog-content">
+                <div class="advisor-grid">
+                    <!-- Advisor 1 -->
+                    <div class="advisor-card">
+                        <img src="/assets/advisor1.jpg" alt="Dr. Jane Doe" class="advisor-photo">
+                        <div class="advisor-name">Dr. Jane Doe</div>
+                        <div class="advisor-info">
+                            Undergrad: University of Toronto<br>
+                            Medical School: Harvard Medical School<br>
+                            Residency: Toronto General Hospital
+                        </div>
+                    </div>
 
-        <div class="advisor-card">
-            <img src="assets/advisor3.jpg" alt="Dr. Alice Brown">
-            <h3>Dr. Alice Brown</h3>
-            <p>Undergrad: University of British Columbia</p>
-            <p>Medical School: University of Toronto</p>
-            <p>Residency: University Health Network</p>
-        </div>
+                    <!-- Advisor 2 -->
+                    <div class="advisor-card">
+                        <img src="/assets/advisor2.jpg" alt="Dr. John Smith" class="advisor-photo">
+                        <div class="advisor-name">Dr. John Smith</div>
+                        <div class="advisor-info">
+                            Undergrad: McGill University<br>
+                            Medical School: Stanford University<br>
+                            Residency: Cleveland Clinic
+                        </div>
+                    </div>
 
-        <div class="advisor-card">
-            <img src="assets/advisor4.jpg" alt="Dr. Mark Lee">
-            <h3>Dr. Mark Lee</h3>
-            <p>Undergrad: Queen's University</p>
-            <p>Medical School: Yale School of Medicine</p>
-            <p>Residency: Massachusetts General Hospital</p>
-        </div>
-    </div>
-</main>
+                    <!-- Advisor 3 -->
+                    <div class="advisor-card">
+                        <img src="/assets/advisor3.jpg" alt="Dr. Emily Chen" class="advisor-photo">
+                        <div class="advisor-name">Dr. Emily Chen</div>
+                        <div class="advisor-info">
+                            Undergrad: University of British Columbia<br>
+                            Medical School: Washington University in St. Louis<br>
+                            Residency: Mount Sinai Hospital
+                        </div>
+                    </div>
 
-<footer>
-    <p>&copy; 2025 Pledge Consultants. All rights reserved.</p>
-</footer>
+                    <!-- Add more advisors here -->
+                </div>
+
+                <a href="/#home" class="back-link">&larr; Back to Home</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pledge Consultants. All rights reserved.</p>
+    </footer>
 </body>
 </html>
