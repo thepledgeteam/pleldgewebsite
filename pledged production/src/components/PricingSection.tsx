@@ -11,8 +11,8 @@ const PricingSection = () => {
     {
       icon: Target,
       service: "School Selection Strategy", 
-      price: "$100",
-      details: "Personalized list targeting your stats, goals, and program fit (U.S./Canada)"
+      price: "$50 per session",
+      details: "Personalized list targeting your stats, goals, extracurriculars and program fit (U.S./Canada)"
     },
     {
       icon: MessageSquare,
@@ -122,3 +122,4 @@ const PricingSection = () => {
 
 
 export default PricingSection;
+
